@@ -1,10 +1,12 @@
 ---
 import "@fontsource-variable/inter-tight";
 import "@fontsource/inter-tight";
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/jetbrains-mono";
 
 export interface Props {
-  title: string | undefined;
-  description: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
 }
 
 const { title = "AetherNet", description = "" } = Astro.props;
@@ -22,13 +24,12 @@ const { title = "AetherNet", description = "" } = Astro.props;
     <link rel="preconnect" href="https://github.com" />
     <link rel="prefetch" href="https://github.com/henrikvtcodes.png" />
     <link rel="canonical" href={Astro.url} />
-    {/** FACEBOOK / OPENGRAPH */}
+    {/* OpenGraph */}
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={"/mountain-sunrise.jpg"} />
-    {/* TWITTER */}
+    {/* Twitter */}
     <meta property="twitter:card" content={"summary"} />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
@@ -36,11 +37,12 @@ const { title = "AetherNet", description = "" } = Astro.props;
 
     <style>
       :root {
-        font-family: "Inter Tight Variable", sans-serif;
+        font-family: "Inter Tight Variable", "Inter Tight", sans-serif;
+        color: white;
       }
     </style>
   </head>
-  <body>
+  <body class="w-screen min-h-screen bg-zinc-900">
     <slot />
   </body>
 </html>
