@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/sitemap": "^3.1.2",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/inter-tight": "^5.0.20",
     "@fontsource-variable/jetbrains-mono": "^5.0.20",
