@@ -3,4 +3,22 @@ import Header from "../components/Header.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
-<RootLayout><Header /> </RootLayout>
+<RootLayout title="Peering Information"
+  ><Header />
+  <div class="w-screen grid place-content-center">
+    <main class="flex flex-col items-start px-4 max-w-2xl">
+      <h1 class="text-4xl font-semibold py-4 text-center w-full">
+        Peering with AetherNet
+      </h1>
+      <div class="w-full">
+        <h2 class="text-xl font-medium pb-1">Peering Policy</h2>
+        <p class="">
+          We have an <b>open</b> peering policy, with a few stipulations.
+          <ol class="list-decimal list-inside pt-2">
+            <li>You must have an up-to-date PeeringDB page</li>
+          </ol>
+        </p>
+      </div>
+    </main>
+  </div>
+</RootLayout>

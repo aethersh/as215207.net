@@ -3,4 +3,12 @@ import Header from "../components/Header.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
-<RootLayout><Header /> </RootLayout>
+<RootLayout
+  ><Header /><div class="w-screen grid place-content-center">
+    <main class="flex flex-col items-start px-4 max-w-2xl">
+      <h1 class="text-4xl font-semibold py-4 text-center w-full">
+        About AetherNet
+      </h1>
+    </main>
+  </div>
+</RootLayout>
