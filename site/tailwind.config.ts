@@ -6,11 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "Inter Tight Variable",
-          "Inter Tight",
-          ...defaultTheme.fontFamily.sans,
-        ],
+        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
         mono: [
           "JetBrains Mono Variable",
           "JetBrains Mono",
