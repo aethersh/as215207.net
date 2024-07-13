@@ -3,7 +3,7 @@ import figletCb from "figlet";
 export type Fonts = "Slant" | "Alpha" | "Larry 3D" | "Roman" | "Speed";
 
 export const figlet = (text: string, font: Fonts = "Speed") =>
-  new Promise((resolve, reject) => {
+  new Promise<string | undefined>((resolve, reject) => {
     figletCb(
       text,
       {
