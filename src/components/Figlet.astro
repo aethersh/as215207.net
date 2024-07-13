@@ -12,7 +12,7 @@ type Props = {
 
 const { text, font, class: classes, size = "medium" } = Astro.props;
 
-const textStyles = cva(["whitespace-pre", "px-3"], {
+const textStyles = cva(["whitespace-pre font-mono", "px-3"], {
   variants: {
     font: {
       Roman: "",

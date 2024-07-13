@@ -1,13 +1,20 @@
 ---
-import Header from "../components/Header.astro";
+import Figlet from "../components/Figlet.astro";
+import Pride from "../components/Pride.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
-<RootLayout
-  ><Header />
+<RootLayout>
   <div class="w-screen grid place-content-center">
-    <main class="flex flex-col items-start px-4 max-w-2xl">
-      <h1 class="text-4xl font-semibold py-4 text-center w-full">AS215207</h1>
+    <main class="flex flex-col items-start px-4 max-w-3xl">
+      <h1 class="py-4">
+        <Figlet
+          text="AetherNet"
+          font="Roman"
+          size="medium"
+          class="bg-clip-text bg-gradient-to-r from-purple-500 to-fuchsia-500 text-transparent bg-cover"
+        />
+      </h1>
       <h2 class="text-2xl italic font-medium text-center w-full">
         Welcome to the Aether
       </h2>
@@ -16,24 +23,17 @@ import RootLayout from "../layouts/RootLayout.astro";
           target="_blank"
           href="https://tibinonest.me">tibs</a
         > and <a target="_blank" href="https://henrikvt.com">Henrik</a>. We are
-        both (computer) networking enthusiasts who believe in an open, free
-        internet.
+        (computer) networking enthusiasts who believe in an open, free internet.
       </p>
-      <nav
-        class="md:hidden justify-center items-center gap-x-4 py-4 flex w-full"
-      >
+      <nav class="justify-center items-center gap-x-4 py-4 flex w-full">
         <a target="_blank" href="https://www.peeringdb.com/net/35756"
           >PeeringDB</a
         >
         <a target="_blank" href="https://bgp.tools/as/215207">bgp.tools</a>
         <a target="_blank" href="https://bgp.he.net/AS215207">bgp.he.net</a>
       </nav>
+
+      <Pride />
     </main>
   </div>
 </RootLayout>
-
-<style>
-  a {
-    @apply text-blue-500 hover:text-blue-600;
-  }
-</style>
