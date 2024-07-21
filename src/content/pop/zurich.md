@@ -1,6 +1,6 @@
 ---
 serverName: zurich
-location: "Zurich"
+location: "Zurich, CHE"
 type: vps
 provider:
   name: iFog

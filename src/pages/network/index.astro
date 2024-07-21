@@ -1,6 +1,6 @@
 ---
-import Pride from "../components/Pride.astro";
-import RootLayout from "../layouts/RootLayout.astro";
+import Pride from "../../components/Pride.astro";
+import RootLayout from "../../layouts/RootLayout.astro";
 import { getCollection } from "astro:content";
 
 const pops = await getCollection("pop");
@@ -40,7 +40,9 @@ const prefixes = await getCollection("prefix");
             {
               pops.map((pop) => (
                 <li>
-                  <a href={`/network/${pop.data.serverName}`}>
+                  <a
+                    href={`/network/${encodeURIComponent(pop.data.serverName)}`}
+                  >
                     {pop.data.serverName}
                   </a>{" "}
                   - {pop.data.location}
@@ -61,7 +63,9 @@ const prefixes = await getCollection("prefix");
             {
               prefixes.map((prefix) => (
                 <li>
-                  <a href={`/network/${prefix.data.prefix}`}>
+                  <a
+                    href={`/network/${encodeURIComponent(prefix.data.prefix)}`}
+                  >
                     {prefix.data.prefix}
                   </a>{" "}
                 </li>

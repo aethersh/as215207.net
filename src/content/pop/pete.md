@@ -1,6 +1,6 @@
 ---
 serverName: pete
-location: "New York City"
+location: "New York City, USA"
 type: vps
 provider:
   name: Neptune Networks

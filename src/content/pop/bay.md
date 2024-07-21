@@ -1,6 +1,6 @@
 ---
 serverName: bay
-location: "Fremont"
+location: "Fremont, USA"
 type: vps
 provider:
   name: ParadoxNetworks

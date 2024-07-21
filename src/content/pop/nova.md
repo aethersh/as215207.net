@@ -1,6 +1,6 @@
 ---
-serverName: maple
-location: "Toronto, CAN"
+serverName: nova
+location: "Ashburn, USA"
 type: vps
 provider:
   name: ParadoxNetworks

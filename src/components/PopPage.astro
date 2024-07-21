@@ -1,0 +1,24 @@
+---
+import { getEntry } from "astro:content";
+
+type Props = {
+  popParam: string;
+};
+
+const pop = await getEntry("pop", Astro.props.popParam);
+---
+
+<div class="grid grid-rows-2 grid-cols-3 w-full">
+  <div class="col-start-1 col-span-1 row-start-1 row-span-1">Hostname</div>
+  <div class="col-start-1 col-span-1 row-start-2 row-span-1">
+    {pop?.data.serverName}
+  </div>
+  <div class="col-start-2 col-span-1 row-start-1 row-span-1">Location</div>
+  <div class="col-start-2 col-span-1 row-start-2 row-span-1">
+    {pop?.data.location}
+  </div>
+  <div class="col-start-3 col-span-1 row-start-1 row-span-1">Provider</div>
+  <div class="col-start-3 col-span-1 row-start-2 row-span-1">
+    <a href={pop?.data.provider.url}>{pop?.data.provider.name}</a>
+  </div>
+</div>

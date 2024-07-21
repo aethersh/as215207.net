@@ -1,6 +1,6 @@
 ---
 serverName: yeehaw
-location: "Kansas City"
+location: "Kansas City, USA"
 type: vps
 provider:
   name: F4 Networks
