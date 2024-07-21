@@ -1,5 +1,7 @@
 ---
+import Links from "../../components/Links.astro";
 import Pride from "../../components/Pride.astro";
+import TopNav from "../../components/TopNav.astro";
 import RootLayout from "../../layouts/RootLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -7,19 +9,14 @@ const pops = await getCollection("pop");
 const prefixes = await getCollection("prefix");
 ---
 
-<RootLayout>
+<RootLayout title="Network | AS215207">
   <div
     class="w-screen min-h-screen overflow-x-hidden flex flex-col items-center justify-start"
   >
     <main
       class="flex flex-col items-start md:px-4 px-2 pt-4 md:pt-0 max-w-3xl md:w-3xl w-screen font-mono"
     >
-      <nav
-        class="justify-around items-center md:gap-x-2 gap-x-1 py-2 flex w-full"
-      >
-        <a href="/">home</a>
-        <a href="/peering">peering</a>
-      </nav>
+      <TopNav page="network" />
       <h2 class="text-3xl font-medium text-center w-full">Network</h2>
       <h3 class="text-xl text-center w-full pt-2">AS215207</h3>
 
@@ -27,9 +24,10 @@ const prefixes = await getCollection("prefix");
         AetherNet is IPv6-only and currently only runs on BGP VPS providers. Our
         virtual routers use BIRDv2 & Pathvector. Most routers are running Alpine
         Linux, while some are running Debian. We are currently working on
-        switching to NixOS for all routers; <a href="/network/nova">nova</a> is the
-        testbed for that. <br /> In the future we would like to actually colocate
-        hardware, but that is currently out of our budget, especially considering
+        switching to NixOS for all virtual routers; <a href="/network/nova"
+          >nova</a
+        > is the testbed for that. <br /> In the future we would like to actually
+        colocate hardware, but that is currently out of our budget, especially considering
         how expensive colo is in our home metro area of New York City.
       </p>
 
@@ -75,16 +73,7 @@ const prefixes = await getCollection("prefix");
         </div>
       </div>
 
-      <nav
-        class="justify-center items-center md:gap-x-4 gap-x-1 sm:gap-y-0 gap-y-2 py-4 flex sm:flex-wrap sm:flex-row flex-col w-full"
-      >
-        <h4 class="sm:basis-full shrink-0 text-center">links</h4>
-        <a target="_blank" href="https://www.peeringdb.com/net/35756"
-          >PeeringDB</a
-        >
-        <a target="_blank" href="https://bgp.tools/as/215207">bgp.tools</a>
-        <a target="_blank" href="https://bgp.he.net/AS215207">bgp.he.net</a>
-      </nav>
+      <Links />
 
       <Pride />
     </main>

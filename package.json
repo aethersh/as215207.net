@@ -21,6 +21,7 @@
     "@fontsource/inter": "^5.0.17",
     "@fontsource/inter-tight": "^5.0.19",
     "@fontsource/jetbrains-mono": "^5.0.19",
+    "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.11.5",
     "cva": "npm:class-variance-authority@^0.7.0",
     "figlet": "^1.7.0",

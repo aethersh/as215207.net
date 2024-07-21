@@ -5,20 +5,32 @@ type Props = {
   popParam: string;
 };
 
-const pop = await getEntry("pop", Astro.props.popParam);
+const pop = (await getEntry("pop", Astro.props.popParam))!!;
+
+const { Content } = await pop.render();
 ---
 
-<div class="grid grid-rows-2 grid-cols-3 w-full">
-  <div class="col-start-1 col-span-1 row-start-1 row-span-1">Hostname</div>
-  <div class="col-start-1 col-span-1 row-start-2 row-span-1">
-    {pop?.data.serverName}
+<article class="w-full space-y-2 prose-base">
+  <div class="grid grid-rows-2 grid-cols-3 w-full mb-4">
+    <div class="col-start-1 col-span-1 row-start-1 row-span-1 font-semibold">
+      Hostname
+    </div>
+    <div class="col-start-1 col-span-1 row-start-2 row-span-1">
+      {pop?.data.serverName}.as215207.net
+    </div>
+    <div class="col-start-2 col-span-1 row-start-1 row-span-1 font-semibold">
+      Location
+    </div>
+    <div class="col-start-2 col-span-1 row-start-2 row-span-1">
+      {pop?.data.location}
+    </div>
+    <div class="col-start-3 col-span-1 row-start-1 row-span-1 font-semibold">
+      Provider
+    </div>
+    <div class="col-start-3 col-span-1 row-start-2 row-span-1">
+      <a href={pop?.data.provider.url}>{pop?.data.provider.name}</a>
+    </div>
   </div>
-  <div class="col-start-2 col-span-1 row-start-1 row-span-1">Location</div>
-  <div class="col-start-2 col-span-1 row-start-2 row-span-1">
-    {pop?.data.location}
-  </div>
-  <div class="col-start-3 col-span-1 row-start-1 row-span-1">Provider</div>
-  <div class="col-start-3 col-span-1 row-start-2 row-span-1">
-    <a href={pop?.data.provider.url}>{pop?.data.provider.name}</a>
-  </div>
-</div>
+
+  <Content />
+</article>

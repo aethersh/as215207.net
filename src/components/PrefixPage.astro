@@ -5,20 +5,26 @@ type Props = {
   prefixParam: string;
 };
 
-const prefix = await getEntry("prefix", Astro.props.prefixParam);
+const prefix = (await getEntry("prefix", Astro.props.prefixParam))!!;
+
+const { Content } = await prefix.render();
 ---
 
-<div class="grid grid-rows-2 grid-cols-3 w-full">
-  <div class="col-start-1 col-span-1 row-start-1 row-span-1">Prefix</div>
-  <div class="col-start-1 col-span-1 row-start-2 row-span-1">
-    {prefix?.data.prefix}
+<article class="w-full prose-base">
+  <div class="grid grid-rows-2 grid-cols-3 w-full mb-4">
+    <div class="col-start-1 col-span-1 row-start-1 row-span-1">Prefix</div>
+    <div class="col-start-1 col-span-1 row-start-2 row-span-1">
+      {prefix?.data.prefix}
+    </div>
+    <div class="col-start-2 col-span-1 row-start-1 row-span-1">RIR</div>
+    <div class="col-start-2 col-span-1 row-start-2 row-span-1">
+      {prefix?.data.rir}
+    </div>
+    <div class="col-start-3 col-span-1 row-start-1 row-span-1">Provider</div>
+    <div class="col-start-3 col-span-1 row-start-2 row-span-1">
+      <a href={prefix?.data.provider.url}>{prefix?.data.provider.name}</a>
+    </div>
   </div>
-  <div class="col-start-2 col-span-1 row-start-1 row-span-1">RIR</div>
-  <div class="col-start-2 col-span-1 row-start-2 row-span-1">
-    {prefix?.data.rir}
-  </div>
-  <div class="col-start-3 col-span-1 row-start-1 row-span-1">Provider</div>
-  <div class="col-start-3 col-span-1 row-start-2 row-span-1">
-    <a href={prefix?.data.provider.url}>{prefix?.data.provider.name}</a>
-  </div>
-</div>
+
+  <Content />
+</article>

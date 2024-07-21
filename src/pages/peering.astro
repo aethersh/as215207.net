@@ -1,21 +1,18 @@
 ---
+import Links from "../components/Links.astro";
 import Pride from "../components/Pride.astro";
+import TopNav from "../components/TopNav.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
-<RootLayout>
+<RootLayout title="Peering Policy | AS215207">
   <div
     class="w-screen min-h-screen overflow-x-hidden flex flex-col items-center justify-start"
   >
     <main
       class="flex flex-col items-start md:px-4 px-2 pt-4 md:pt-0 max-w-3xl md:w-3xl w-screen font-mono"
     >
-      <nav
-        class="justify-around items-center md:gap-x-2 gap-x-1 py-2 flex w-full"
-      >
-        <a href="/">home</a>
-        <a href="/network">network</a>
-      </nav>
+      <TopNav page="peering" />
       <h2 class="text-3xl font-medium text-center w-full">Peering Policy</h2>
       <h3 class="text-xl text-center w-full pt-2">AS215207</h3>
       <p class="text-base w-full pt-4">
@@ -60,16 +57,7 @@ import RootLayout from "../layouts/RootLayout.astro";
         </span>
       </p>
 
-      <nav
-        class="justify-center items-center md:gap-x-4 gap-x-1 sm:gap-y-0 gap-y-2 py-4 flex sm:flex-wrap sm:flex-row flex-col w-full"
-      >
-        <h4 class="sm:basis-full shrink-0 text-center">links</h4>
-        <a target="_blank" href="https://www.peeringdb.com/net/35756"
-          >PeeringDB</a
-        >
-        <a target="_blank" href="https://bgp.tools/as/215207">bgp.tools</a>
-        <a target="_blank" href="https://bgp.he.net/AS215207">bgp.he.net</a>
-      </nav>
+      <Links />
 
       <Pride />
     </main>
