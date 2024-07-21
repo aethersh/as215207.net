@@ -10,8 +10,8 @@ export interface Props {
 }
 
 const {
-  title = "AetherNet, a Hobbynet",
-  description = "AetherNet - AS215207",
+  title = "AetherNet | AS215207",
+  description = "AetherNet is a Hobbynet.",
 } = Astro.props;
 ---
 
@@ -38,14 +38,16 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
 
-    <style>
+    <style is:global>
       :root {
-        font-family: "Inter Tight Variable", "Inter Tight", sans-serif;
-        color: white;
+        @apply font-mono text-white;
+      }
+      a {
+        @apply text-blue-500 hover:text-blue-600;
       }
     </style>
   </head>
-  <body class="w-screen min-h-screen bg-zinc-900">
+  <body class="bg-zinc-900">
     <slot />
   </body>
 </html>

@@ -1,0 +1,65 @@
+---
+import Links from "../components/Links.astro";
+import Pride from "../components/Pride.astro";
+import TopNav from "../components/TopNav.astro";
+import RootLayout from "../layouts/RootLayout.astro";
+---
+
+<RootLayout title="Peering Policy | AS215207">
+  <div
+    class="w-screen min-h-screen overflow-x-hidden flex flex-col items-center justify-start"
+  >
+    <main
+      class="flex flex-col items-start md:px-4 px-2 pt-4 md:pt-0 max-w-3xl md:w-3xl w-screen font-mono"
+    >
+      <TopNav page="peering" />
+      <h2 class="text-3xl font-medium text-center w-full">Peering Policy</h2>
+      <h3 class="text-xl text-center w-full pt-2">AS215207</h3>
+      <p class="text-base w-full pt-4">
+        We do not have any prerequisites for peers regarding network size,
+        minimum locations, etc. We only have the following requirements:
+        <ol class="list-decimal list-inside pt-2 space-y-2 px-3">
+          <li>
+            <b>IPv6:</b> Your network must be fully capable of passing IPv6 traffic.
+          </li>
+          <li>
+            <b>PeeringDB:</b> You must have a PeeringDB page that reflects the current
+            state of your network.
+          </li>
+          <li>
+            <b>Common Locations:</b> We must be able to peer at all common Internet
+            Exchange Points. If you peer with route servers at these locations, we
+            consider this requirement satisfied.
+          </li>
+          <li>
+            <b>Routing Security:</b> You must have RPKI ROAs for all prefixes you
+            announce. You also must not leak routes or advertise invalid routes.
+          </li>
+
+          <li>
+            <b>Settlement-free Peering:</b> We will not peer with networks that require
+            payment for peering; in turn, we do not require payment for peering.
+            This does not include transit.
+          </li>
+
+          <li>
+            <b>Best-effort SLAs:</b> As Aethernet is a hobbynet, we do not guarantee
+            minimum uptime or performance. If there are problems and they are not
+            resolved within 72 hours after you notice them, feel free to contact
+            our NOC; details can be found on PeeringDB.
+          </li>
+        </ol>
+
+        <span class="flex flex-col text-center w-full pt-4"
+          ><b>Interested?</b> Shoot an email to <a
+            href="mailto:peering@as215207.net">peering@as215207.net</a
+          >
+        </span>
+      </p>
+
+      <Links />
+
+      <Pride />
+    </main>
+  </div>
+</RootLayout>

@@ -1,0 +1,103 @@
+---
+import { figlet, type Fonts } from "../utils/figlet";
+import { cva } from "cva";
+import { twMerge } from "tailwind-merge";
+
+type Props = {
+  text: string;
+  font: Fonts;
+  size?: "small" | "medium" | "large";
+  class?: string;
+};
+
+const { text, font, class: classes, size = "medium" } = Astro.props;
+
+const textStyles = cva(["whitespace-pre font-mono", "px-3"], {
+  variants: {
+    font: {
+      Roman: "",
+      Slant: "text-xs",
+      Speed: "font-bold",
+      "Larry 3D": "font-bold",
+      Alpha: "font-extrabold",
+    },
+    size: {
+      small: "text-2xs sm:text-3xs",
+      medium: "text-xs",
+      large: "text-base",
+    },
+  },
+
+  compoundVariants: [
+    {
+      font: "Roman",
+      size: "small",
+      class: "text-4xs", // custom
+    },
+    {
+      font: "Roman",
+      size: "large",
+      class: "text-lg", // custom
+    },
+    {
+      font: "Slant",
+      size: "small",
+      class: "text-xs", // custom
+    },
+    {
+      font: "Slant",
+      size: "medium",
+      class: "text-2xl", // custom
+    },
+    {
+      font: "Slant",
+      size: "large",
+      class: "text-4xl", // custom
+    },
+    {
+      font: "Speed",
+      size: "small",
+      class: "text-xs", // custom
+    },
+    {
+      font: "Speed",
+      size: "medium",
+      class: "text-xl", // custom
+    },
+    {
+      font: "Speed",
+      size: "large",
+      class: "text-3xl", // custom
+    },
+    {
+      font: "Larry 3D",
+      size: "medium",
+      class: "text-lg", // custom
+    },
+    {
+      font: "Larry 3D",
+      size: "large",
+      class: "text-2xl", // custom
+    },
+    {
+      font: "Alpha",
+      size: "small",
+      class: "text-5.5xs", // custom
+    },
+    {
+      font: "Alpha",
+      size: "medium",
+      class: "text-4xs", //custom
+    },
+    {
+      font: "Alpha",
+      size: "large",
+      class: "text-3xs",
+    },
+  ],
+});
+
+const figletified = await figlet(text, font);
+---
+
+<pre class={twMerge(textStyles({ font, size }), classes)}>{figletified}</pre>
