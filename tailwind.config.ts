@@ -1,17 +1,12 @@
 import { type Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
-        mono: [
-          "JetBrains Mono Variable",
-          "JetBrains Mono",
-          ...defaultTheme.fontFamily.mono,
-        ],
+        sans: ["Inter Variable", "Inter"],
+        mono: ["JetBrains Mono Variable", "JetBrains Mono"],
       },
       fontSize: {
         "2xs": "0.625rem",

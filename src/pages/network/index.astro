@@ -24,11 +24,10 @@ const prefixes = await getCollection("prefix");
         AetherNet is IPv6-only and currently only runs on BGP VPS providers. Our
         virtual routers use BIRDv2 & Pathvector. Most routers are running Alpine
         Linux, while some are running Debian. We are currently working on
-        switching to NixOS for all virtual routers; <a href="/network/nova"
-          >nova</a
-        > is the testbed for that. <br /> In the future we would like to actually
-        colocate hardware, but that is currently out of our budget, especially considering
-        how expensive colo is in our home metro area of New York City.
+        switching to NixOS for all virtual routers; see more information further
+        down the page. <br /> In the future we would like to actually colocate hardware,
+        but that is currently out of our budget, especially considering how expensive
+        colo is in our home metro area of New York City.
       </p>
 
       <div class="flex md:flex-row flex-col justify-around w-full pt-4">
@@ -72,6 +71,19 @@ const prefixes = await getCollection("prefix");
           </ul>
         </div>
       </div>
+
+      <h3 class="pt-4 text-lg w-full text-center">NixOS Transition</h3>
+      <p class="pt-2">
+        Initially, we aimed to use Alpine Linux as the host OS for all virtual
+        routers as it is lightweight. In some cases, we would fall back to
+        Debian. <br /> However, we have decided to switch to NixOS for all new and
+        existing virtual routers. It helps guarantee correctness and reproducibility,
+        and reduces the work required to maintain configurations. Our flake is not
+        currently open source, however, we plan to make it available in the future.
+        <br /> nova, strudel, and tulip were bootstrapped with NixOS and are fully
+        online. bay & maple have been successfully migrated. pete, yeehaw, and zurich
+        are currently on hold.
+      </p>
 
       <Links />
 
