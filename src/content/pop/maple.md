@@ -11,4 +11,4 @@ maple is another one of our primary nodes, rented from Paradox Networks. It is a
 
 This node also recieves free transit (via ONIX) from the lovely folks over at [Hurricane Electric](https://he.net).
 
-It runs Alpine Linux with BIRDv2/Pathvector. The name is inspired by its location (Canada).
+It currently runs NixOS with Pathvector and BIRD 2; previously, it ran Alpine Linux. The name is inspired by its location (Canada).
