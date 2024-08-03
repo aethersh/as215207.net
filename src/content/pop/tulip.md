@@ -1,6 +1,6 @@
 ---
 serverName: tulip
-location: "Meppel, NL"
+location: "Meppel, NLD"
 type: vps
 provider:
   name: Servperso Systems

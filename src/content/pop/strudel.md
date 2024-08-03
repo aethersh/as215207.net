@@ -1,6 +1,6 @@
 ---
 serverName: strudel
-location: "Düsseldorf, DE"
+location: "Düsseldorf, DEU"
 type: vps
 provider:
   name: Servperso Systems
