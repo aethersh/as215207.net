@@ -10,7 +10,9 @@ const prefix = (await getEntry("prefix", Astro.props.prefixParam))!!;
 const { Content } = await prefix.render();
 ---
 
-<article class="w-full prose-base">
+<article
+  class="w-full prose-base prose-table:prose prose-table:prose-invert prose-table:w-full prose-table:mx-auto"
+>
   <div class="grid grid-rows-2 grid-cols-3 w-full mb-4">
     <div class="col-start-1 col-span-1 row-start-1 row-span-1">Prefix</div>
     <div class="col-start-1 col-span-1 row-start-2 row-span-1">

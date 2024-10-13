@@ -3,7 +3,82 @@ import Links from "../../components/Links.astro";
 import Pride from "../../components/Pride.astro";
 import TopNav from "../../components/TopNav.astro";
 import RootLayout from "../../layouts/RootLayout.astro";
-import { Content as CommunitiesPage } from "../../components/communities.md";
+
+import { ASN } from "../../utils/constants";
+
+const INFO_COMMUNITIES = {
+  "0:100": "from Self",
+  "100:80": "from Transit",
+  "100:90": "from IXP RS",
+  "100:100": "from Peer",
+  "100:200": "from Downstream",
+  "120:$ASN": "from $ASN",
+};
+
+const infoCommunties = Object.entries(INFO_COMMUNITIES).map(
+  ([community, description]) => ({
+    community: `${ASN}:${community}`,
+    description,
+  })
+);
+
+/* ------------ IXP Communities ------------ */
+
+const IXP_COMMUNITY_PREFIX = `${ASN}:160`;
+
+const IXP_ASNS = [
+  { asn: 209643, ixp: "Locix NL" },
+  { asn: 202409, ixp: "Locix DÜS" },
+  { asn: 202409, ixp: "Locix FRA" },
+  { asn: 62768, ixp: "NVIX" },
+  { asn: 57369, ixp: "ONIX" },
+  { asn: 57369, ixp: "FREMIX" },
+  { asn: 36090, ixp: "F4IX MCI" },
+  { asn: 47498, ixp: "FogIXP" },
+];
+
+const ixpCommunities = IXP_ASNS.map(({ asn, ixp }) => ({
+  community: `${IXP_COMMUNITY_PREFIX}:${asn}`,
+  description: `from ${ixp}`,
+}));
+
+/* ------------ Location Communities ------------ */
+
+const LOCATION_COMMUNITY_PREFIX = `${ASN}:140`;
+
+const LOCATION_COMMUNITIES = {
+  "10840": { iso3166: "840", description: "Virginia, US (10th state)" },
+  "11840": { iso3166: "840", description: "New York, US (11th state)" },
+  "14840": { iso3166: "840", description: "Vermont, US (14th state)" },
+  "31840": { iso3166: "840", description: "California, US (31st state)" },
+  "34840": { iso3166: "840", description: "Kansas City, US (34th state)" },
+  "4124": {
+    iso3166: "124",
+    description: "Ontario, CA (4th largest land mass)",
+  },
+  "2124": {
+    iso3166: "124",
+    description: "Quebec, CA (2nd largest land mass)",
+  },
+  "5124": {
+    iso3166: "124",
+    description: "British Columbia, CA (2nd largest land mass)",
+  },
+  "1276": {
+    iso3166: "276",
+    description: "North Rhine-Westphalia (Düsseldorf) Germany",
+  },
+  "5276": { iso3166: "276", description: "Hesse (Frankfurt) Germany" },
+  "528": { iso3166: "528", description: "Netherlands" },
+  "756": { iso3166: "756", description: "Switzerland" },
+};
+
+const locationCommunities = Object.entries(LOCATION_COMMUNITIES).map(
+  ([id, communityInfo]) => ({
+    community: `${LOCATION_COMMUNITY_PREFIX}:${id}`,
+    ...communityInfo,
+  })
+);
 ---
 
 <RootLayout title="Network | AS215207">
@@ -16,9 +91,84 @@ import { Content as CommunitiesPage } from "../../components/communities.md";
       <TopNav page="communities" />
       <h1 class="text-3xl font-medium text-center w-full">Communities</h1>
       <h2 class="text-xl text-center w-full pt-2">AS215207</h2>
-      <article class="w-full space-y-2 prose-base">
-        <CommunitiesPage />
-      </article>
+      <div
+        class="w-full space-y-2 prose-base prose-table:prose prose-table:prose-invert"
+      >
+        We exclusively use BGP Large Communities, as defined in <a
+          href="https://datatracker.ietf.org/doc/rfc8092/"
+          target="_blank">IETF RFC 8092</a
+        >.
+
+        <section>
+          <h3>Info Communities</h3>
+          <table>
+            <thead
+              ><tr><th class="w-44">Community</th><th>Learned</th></tr></thead
+            >
+            <tbody
+              >{
+                infoCommunties.map((e) => (
+                  <tr>
+                    <td>
+                      <code>{e.community}</code>
+                    </td>
+                    <td>{e.description}</td>
+                  </tr>
+                ))
+              }</tbody
+            >
+          </table>
+        </section>
+        <section>
+          <h3>IXP Communities</h3>
+          <p></p>
+          <table>
+            <thead><tr><th class="w-44">Community</th><th>IXP</th></tr></thead>
+            <tbody
+              >{
+                ixpCommunities.map((e) => (
+                  <tr>
+                    <td>
+                      <code>{e.community}</code>
+                    </td>
+                    <td>{e.description}</td>
+                  </tr>
+                ))
+              }</tbody
+            >
+          </table>
+        </section>
+
+        <section>
+          <h3>Location Communities</h3>
+          <p>
+            Communities are based on ISO-3166-1 country codes, along with an
+            optional prefix.
+          </p>
+          <table class="w-full">
+            <thead class="w-full"
+              ><tr class="w-full"
+                ><th class="w-44">Community</th><th>ISO-3166-1</th><th
+                  class="w-fit">Learned in</th
+                ></tr
+              ></thead
+            >
+            <tbody
+              >{
+                locationCommunities.map((e) => (
+                  <tr>
+                    <td>
+                      <code>{e.community}</code>
+                    </td>
+                    <td>{e.iso3166}</td>
+                    <td>{e.description}</td>
+                  </tr>
+                ))
+              }</tbody
+            >
+          </table>
+        </section>
+      </div>
 
       <Links />
 

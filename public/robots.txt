@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://as215207.net/sitemap-index.xml

@@ -10,8 +10,6 @@ provider:
 
 This IPv6 block has been graciously provided by EzriCloud/Based Networking.
 
-## Subnets
-
 | Subnet              | Location             | Description                                 |
 | ------------------- | -------------------- | ------------------------------------------- |
 | `2602:fbcf:d0::/47` | New York City, US    | Advertised by [`pete`](/network/pete)       |
