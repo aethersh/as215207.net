@@ -1,0 +1,33 @@
+---
+import Links from "../../components/Links.astro";
+import Pride from "../../components/Pride.astro";
+import TopNav from "../../components/TopNav.astro";
+import RootLayout from "../../layouts/RootLayout.astro";
+import { Content as CommunitiesPage } from "../../components/communities.md";
+---
+
+<RootLayout title="Network | AS215207">
+  <div
+    class="w-screen min-h-screen overflow-x-hidden flex flex-col items-center justify-start"
+  >
+    <main
+      class="flex flex-col items-start md:px-4 px-2 pt-4 md:pt-0 max-w-3xl md:w-3xl w-screen font-mono"
+    >
+      <TopNav page="communities" />
+      <h1 class="text-3xl font-medium text-center w-full">Communities</h1>
+      <h2 class="text-xl text-center w-full pt-2">AS215207</h2>
+      <article class="w-full space-y-2 prose-base">
+        <CommunitiesPage />
+      </article>
+
+      <Links />
+
+      <Pride />
+
+      <span class="w-full inline-flex justify-center pt-4"
+        ><a href="https://github.com/aethersh/as215207.net">see source code</a
+        ></span
+      >
+    </main>
+  </div>
+</RootLayout>
