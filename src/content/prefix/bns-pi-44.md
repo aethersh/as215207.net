@@ -8,7 +8,7 @@ provider:
   url: https://as206628.net/
 ---
 
-This IPv6 block has been graciously provided by EzriCloud/Based Networking.
+This IPv6 block has been graciously provided by EzriCloud/Based Networking. For BGP communities information, [see our communities page.](/network/communities)
 
 | Subnet              | Location             | Description                                 |
 | ------------------- | -------------------- | ------------------------------------------- |
