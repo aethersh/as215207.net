@@ -25,7 +25,7 @@
     "astro": "^5.2.5",
     "cva": "npm:class-variance-authority@^0.7.0",
     "figlet": "^1.8.0",
-    "svelte": "^4.2.19",
+    "svelte": "^5.19.8",
     "tailwind-merge": "^2.5.3",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.3"
