@@ -8,4 +8,4 @@ provider:
   url: https://lagrange.cloud
 ---
 
-This prefix was included as a bonus from our LIR with our RIPE ASN. Our LIR is [Lagrange](https://lagrange.cloud) and we have 1 free year of this Provider-Aggregate IPv6 included. It is also anycasted, however, we will likely not choose to renew this.
+This prefix was included as a bonus from our LIR with our RIPE ASN. Our LIR is [Lagrange](https://lagrange.cloud) and we have 1 free year of this Provider-Aggregate IPv6 included. It will be decommissioned by mid-March of this year
