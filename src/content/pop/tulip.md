@@ -7,6 +7,9 @@ provider:
   url: https://www.servperso.net/
 ---
 
-tulip, along with strudel, is a VPS hosted with Servperso systems. IT enables us to access LOCIX Netherlands.
+tulip, along with strudel, is a VPS hosted with Servperso systems. It enables us to access LOCIX Netherlands.
 
-This system was boostrapped with and runs NixOS with Pathvector & BIRD 2.
+## Prefixes
+
+- `2602:fbcf:d9::/48`
+- `2602:fbcf:df::/48` (anycast)

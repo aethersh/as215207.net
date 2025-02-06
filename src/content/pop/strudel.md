@@ -7,6 +7,9 @@ provider:
   url: https://www.servperso.net/
 ---
 
-strudel is one of our newest pops, hosted with Servperso Systems in Düsseldorf. It enables us to connect to LOCIX Frankfurt and LOCIX Düsseldorf.
+strudel is hosted with Servperso Systems in Düsseldorf, Germany. It enables us to connect to LOCIX Frankfurt and LOCIX Düsseldorf.
 
-This system was boostrapped with and runs NixOS with Pathvector & BIRD 2.
+## Prefixes
+
+- `2602:fbcf:de::/48`
+- `2602:fbcf:df::/48` (anycast)

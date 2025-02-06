@@ -9,4 +9,7 @@ provider:
 
 bay is a vps from Paradox Networks that allows us to access [FREMIX](https://fremix.exchange/).
 
-It runs NixOS with BIRDv2/Pathvector. It is located in the San Francisco Bay Area, hence the name.
+## Prefixes
+
+- `2602:fbcf:d5::/48`
+- `2602:fbcf:df::/48` (anycast)
