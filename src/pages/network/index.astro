@@ -21,10 +21,13 @@ const prefixes = await getCollection("prefix");
       <h2 class="text-xl text-center w-full pt-2">AS215207</h2>
 
       <p class="pt-4">
-        AetherNet is IPv6-only and currently only runs on BGP VPS providers. Our
-        virtual routers use BIRDv2 & Pathvector, typically on top of NixOS. <br /> In the future we would like to actually colocate hardware,
-        but that is currently out of our budget, especially considering how expensive
-        colo is in our home metro area of New York City. See our <a href="/network/communities">BGP Commmunities</a>
+        AetherNet is IPv6-only and currently runs exclusively on BGP VPS
+        providers. Our virtual routers use BIRDv2 & Pathvector on top of NixOS
+        (unless otherwise specified). <br /> In the future we would like to actually
+        colocate hardware, but that is currently out of our budget, especially considering
+        how expensive colo is in our home metro area of New York City. See our <a
+          href="/network/communities">BGP Commmunities</a
+        >
       </p>
 
       <div class="flex md:flex-row flex-col justify-around w-full pt-4">

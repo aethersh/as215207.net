@@ -10,6 +10,6 @@ export default defineConfig({
   site: "https://as215207.net",
   prefetch: true,
   integrations: [tailwind(), sitemap(), svelte()],
-  output: "hybrid",
+  output: "server",
   adapter: cloudflare(),
 });
