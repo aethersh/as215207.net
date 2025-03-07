@@ -41,7 +41,11 @@ export async function getStaticPaths() {
 
 const collection = allPages.find(
   (page) => page.uri === decodeURIComponent(Astro.params.thing)
-)?.collection as "pop" | "prefix";
+);
+
+if (!collection) {
+  Astro.redirect("/404");
+}
 ---
 
 <RootLayout title="Network | AS215207">
@@ -58,7 +62,7 @@ const collection = allPages.find(
       <h2 class="text-xl text-center w-full pt-2">AS215207</h2>
 
       {
-        collection === "pop" ? (
+        collection?.collection === "pop" ? (
           <PopPage popParam={Astro.params.thing} />
         ) : (
           <PrefixPage prefixParam={Astro.params.thing} />

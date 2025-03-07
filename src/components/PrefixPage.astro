@@ -5,7 +5,11 @@ type Props = {
   prefixParam: string;
 };
 
-const prefix = (await getEntry("prefix", Astro.props.prefixParam))!!;
+const prefix = (await getEntry("prefix", Astro.props.prefixParam))!;
+
+if (!prefix) {
+  Astro.redirect("/404");
+}
 
 const { Content } = await prefix.render();
 ---

@@ -5,7 +5,11 @@ type Props = {
   popParam: string;
 };
 
-const pop = (await getEntry("pop", Astro.props.popParam))!!;
+const pop = await getEntry("pop", Astro.props.popParam)!;
+
+if (!pop) {
+  Astro.redirect("/404");
+}
 
 const { Content } = await pop.render();
 ---
