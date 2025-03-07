@@ -10,6 +10,7 @@ const prefixes = defineCollection({
   type: "content",
   schema: z.object({
     prefix: z.string(),
+    uri: z.string(),
     type: z.enum(["pa", "pi"]),
     rir: z.enum(["arin", "ripe"]),
     provider: providerSchema,

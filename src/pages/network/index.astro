@@ -60,9 +60,7 @@ const prefixes = await getCollection("prefix");
             {
               prefixes.map((prefix) => (
                 <li>
-                  <a
-                    href={`/network/${encodeURIComponent(prefix.data.prefix)}`}
-                  >
+                  <a href={`/network/${prefix.data.uri}`}>
                     {prefix.data.prefix}
                   </a>
                 </li>

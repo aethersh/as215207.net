@@ -1,6 +1,7 @@
 ---
 prefix: "2602:fbcf:d0::/44"
-slug: "2602:fbcf:d0::/44"
+uri: "fbcf-pi-44"
+slug: "fbcf-pi-44"
 type: pi
 rir: arin
 provider:
