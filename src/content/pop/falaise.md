@@ -9,6 +9,8 @@ provider:
 
 falaise is a vps from Free Range Cloud. It allows us to access Unmetered Exchange (Canada West)
 
+It runs NixOS with Pathvector and BIRD 2.
+
 ## Prefixes
 
 - `2602:fbcf:d9::/48`

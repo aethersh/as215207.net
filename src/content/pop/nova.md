@@ -7,9 +7,11 @@ provider:
   url: https://pdxnet.co.uk
 ---
 
+> This node is currently down as we need to change providers for our Virginia PoP.
+
 nova is our newest server, acquired so that we can join [NVIX](https://nvix.us/).
 
-This node runs NixOS with Pathvector & BIRD 2. It was our first full NixOS system and served as the testing ground for our preliminary pathvector + nix integration.
+This node runs NixOS with Pathvector & BIRD 2.
 
 ## Prefixes
 

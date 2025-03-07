@@ -9,6 +9,8 @@ provider:
 
 bay is a vps from Paradox Networks that allows us to access [FREMIX](https://fremix.exchange/).
 
+It runs NixOS with Pathvector and BIRD 2.
+
 ## Prefixes
 
 - `2602:fbcf:d5::/48`
