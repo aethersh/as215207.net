@@ -12,5 +12,5 @@ It is currently hosted with Neptune Networks due to how expensive colocation is 
 
 ## Prefixes
 
-- `2602:fbcf:d0::/47`
+- `2602:fbcf:d0::/48`
 - `2602:fbcf:df::/48` (anycast)

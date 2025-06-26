@@ -11,5 +11,5 @@ provider:
 
 ## Prefixes
 
-- `2602:fbcf:d0::/47`
+- `2602:fbcf:dd::/48`
 - `2602:fbcf:df::/48` (anycast)
