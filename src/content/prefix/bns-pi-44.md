@@ -16,7 +16,7 @@ This IPv6 block has been graciously provided by EzriCloud/Based Networking. For 
 | `2602:fbcf:d0::/48` | New York City, US    | Advertised by [`pete`](/network/pete)       |
 | `2602:fbcf:d1::/48` | _Unused_             | _Not advertised_                            |
 | `2602:fbcf:d2::/48` | _Unused_             | _Not advertised_                            |
-| `2602:fbcf:d3::/48` | _Unused_             | _Not advertised_                            |
+| `2602:fbcf:d3::/48` | Kansas City, US      | Advertised by [`yeehaw`](/network/kier)     |
 | `2602:fbcf:d4::/48` | Kansas City, US      | Advertised by [`yeehaw`](/network/yeehaw)   |
 | `2602:fbcf:d5::/48` | California, US       | Advertised by [`bay`](/network/bay)         |
 | `2602:fbcf:d6::/48` | _Unused_             | _Not advertised_                            |

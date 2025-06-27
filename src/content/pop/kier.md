@@ -1,6 +1,6 @@
 ---
 serverName: kier
-location: "Kansas City, MO"
+location: "Kansas City, USA"
 type: vps
 provider:
   name: Andrewnet
@@ -11,5 +11,5 @@ kier is a VPS provided to us by Andrew from Andrewnet (AS1003). severance is a g
 
 ## Prefixes
 
-- `2602:fbcf:d4::/48`
+- `2602:fbcf:d3::/48`
 - `2602:fbcf:df::/48` (anycast)
