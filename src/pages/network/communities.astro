@@ -39,7 +39,7 @@ const IXP_ASNS = [
 
 const ixpCommunities = IXP_ASNS.map(({ asn, ixp }) => ({
   community: `${IXP_COMMUNITY_PREFIX}:${asn}`,
-  description: `from ${ixp}`,
+  description: `${ixp}`,
 }));
 
 /* ------------ Location Communities ------------ */
