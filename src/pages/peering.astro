@@ -21,8 +21,9 @@ import RootLayout from "../layouts/RootLayout.astro";
             <b>IPv6:</b> Your network must be fully capable of passing IPv6 traffic.
           </li>
           <li>
-            <b>PeeringDB:</b> You must have a PeeringDB page that reflects the current
-            state of your network.
+            <b>PeeringDB:</b> You must have an updated PeeringDB page that reflects
+            the current state of your network, including all PoPs, IXPs, and NOC
+            contact information.
           </li>
           <li>
             <b>Common Locations:</b> We must be able to peer at all common Internet
@@ -34,19 +35,23 @@ import RootLayout from "../layouts/RootLayout.astro";
           </li>
           <li>
             <b>Routing Security:</b> You must have RPKI ROAs for all prefixes you
-            announce. You also must not leak routes or advertise invalid routes.
+            announce. You must not leak routes or advertise invalid routes. Please
+            do not point
           </li>
 
           <li>
             <b>Settlement-free Peering:</b> We will not peer with networks that require
             payment for peering; in turn, we do not require payment for peering.
-            This does not include transit.
+            This rule excludes transit providers who we specifically negotiate with.
           </li>
 
           <li>
             <b>Best-effort SLAs:</b> As Aethernet is a hobbynet, we do not guarantee
-            minimum uptime or performance. If you encounter these types of problems, our NOC can respond to email within 48 hours at most.
-            In the event of high severity problems with our network's behavior, we have a NOC phone number listed as well. Contact details can be found on PeeringDB. 
+            minimum uptime or performance. If you encounter these types of problems,
+            our NOC can respond to email within 48 hours at most. We also have a
+            NOC phone number listed as well but request that you only use that if
+            our network is threatening the stability of other networks. Contact details
+            can be found on PeeringDB.
           </li>
         </ol>
 
