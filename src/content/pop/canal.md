@@ -2,6 +2,7 @@
 serverName: canal
 location: "Amsterdam, NLD"
 type: vps
+visible: false
 provider:
   name: Macarne
   url: https://macarne.com
