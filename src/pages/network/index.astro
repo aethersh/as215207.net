@@ -5,8 +5,8 @@ import TopNav from "../../components/TopNav.astro";
 import RootLayout from "../../layouts/RootLayout.astro";
 import { getCollection } from "astro:content";
 
-const pops = await getCollection("pop");
-const prefixes = await getCollection("prefix");
+const pops = (await getCollection("pop")).filter((p) => p.data.visible);
+const prefixes = (await getCollection("prefix")).filter((p) => p.data.visible);
 ---
 
 <RootLayout title="Network | AS215207">

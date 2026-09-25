@@ -2,6 +2,7 @@
 serverName: tulip
 location: "Meppel, NLD"
 type: vps
+visible: false
 provider:
   name: Servperso Systems
   url: https://www.servperso.net/

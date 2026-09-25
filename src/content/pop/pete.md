@@ -2,6 +2,7 @@
 serverName: pete
 location: "New York City, USA"
 type: vps
+visible: false
 provider:
   name: Neptune Networks
   url: https://neptunenetworks.org

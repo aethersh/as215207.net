@@ -2,6 +2,7 @@
 serverName: maple
 location: "Toronto, CAN"
 type: vps
+visible: false
 provider:
   name: ParadoxNetworks
   url: https://pdxnet.co.uk

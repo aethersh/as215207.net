@@ -2,6 +2,7 @@
 serverName: strudel
 location: "Düsseldorf, DEU"
 type: vps
+visible: false
 provider:
   name: Servperso Systems
   url: https://www.servperso.net/

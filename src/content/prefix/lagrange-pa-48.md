@@ -4,6 +4,7 @@ uri: "85c1-pa-48"
 slug: "85c1-pa-48"
 type: pa
 rir: ripe
+visible: true
 provider:
   name: Lagrange
   url: https://lagrange.cloud

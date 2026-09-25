@@ -2,6 +2,7 @@
 serverName: kier
 location: "Kansas City, USA"
 type: vps
+visible: true
 provider:
   name: Andrewnet
   url: https://andrewnet.net

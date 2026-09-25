@@ -2,6 +2,7 @@
 serverName: falaise
 location: "Vancouver, CAN"
 type: vps
+visible: false
 provider:
   name: Free Range Cloud
   url: https://freerangecloud.com/

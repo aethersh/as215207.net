@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import Pride from "../../components/Pride.astro";
 import RootLayout from "../../layouts/RootLayout.astro";
 import PopPage from "../../components/PopPage.astro";
@@ -40,10 +40,24 @@ export async function getStaticPaths() {
 }
 
 const collection = allPages.find(
-  (page) => page.uri === decodeURIComponent(Astro.params.thing)
+  (page) => page.uri === decodeURIComponent(Astro.params.thing),
 );
 
 if (!collection) {
+  Astro.redirect("/404");
+}
+
+let visible = false;
+
+if (collection?.collection === "pop") {
+  const pop = await getEntry("pop", Astro.params.thing)!;
+  visible = pop.data.visible;
+} else if (collection?.collection === "prefix") {
+  const prefix = await getEntry("prefix", Astro.params.thing)!;
+  visible = prefix.data.visible;
+}
+
+if (!visible) {
   Astro.redirect("/404");
 }
 ---

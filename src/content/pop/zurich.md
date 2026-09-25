@@ -2,6 +2,7 @@
 serverName: zurich
 location: "Zurich, CHE"
 type: vps
+visible: false
 provider:
   name: iFog (v6only)
   url: https://ifog.ch

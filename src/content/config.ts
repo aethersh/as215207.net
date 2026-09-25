@@ -14,6 +14,7 @@ const prefixes = defineCollection({
     type: z.enum(["pa", "pi"]),
     rir: z.enum(["arin", "ripe"]),
     provider: providerSchema,
+    visible: z.boolean().default(true),
   }),
 });
 
@@ -25,6 +26,7 @@ const pops = defineCollection({
     location: z.string(),
     type: z.enum(["vps", "colo"]),
     provider: providerSchema,
+    visible: z.boolean().default(true),
   }),
 });
 
